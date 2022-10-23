@@ -20,6 +20,6 @@ jobs:
       - name: Release with Notes
         uses: softprops/action-gh-release@v1
         with:
-          files: build/outputs/release/hello.txtapp-release-unsigned.apk
+          files: build/outputs/release/hello.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
