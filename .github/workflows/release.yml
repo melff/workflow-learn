@@ -15,11 +15,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Build project
         run: |
-          mkdir -p app/build/outputs/release
-          echo hello > app/build/outputs/release/release-unsigned.txt
+          mkdir -p build/outputs/release
+          echo hello > build/outputs/release/hello.txt
       - name: Release with Notes
         uses: softprops/action-gh-release@v1
         with:
-          files: app/build/outputs/apk/release/app-release-unsigned.apk
+          files: build/outputs/release/hello.txtapp-release-unsigned.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
